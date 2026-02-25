@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { QUATERNARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR } from "../commons/constants";
+import { PRIMARY_COLOR, QUATERNARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR } from "../commons/constants";
 
 export const stylesGlobal = StyleSheet.create({
     title: {
@@ -14,7 +14,7 @@ export const stylesGlobal = StyleSheet.create({
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
         paddingHorizontal: 30,
-        paddingTop: 40
+        paddingVertical: 40
     },
     titleWelcome: {
         fontSize: 17,
@@ -39,5 +39,39 @@ export const stylesGlobal = StyleSheet.create({
         textAlign: 'center',
         fontSize: 15,
         fontWeight: 'bold'
+    },
+    iconPassword: {
+        position: 'absolute',
+        bottom: 15,
+        right: 10
+    },
+    textRedirect: {
+        marginTop: 20,
+        fontSize: 15,
+        color: PRIMARY_COLOR,
+        fontWeight: 'bold',
+        textAlign: 'center'
+    },
+    containerCard: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        padding: 10,
+        borderWidth: 1,
+        borderColor: '#CFCFCF',
+        borderRadius: 10,
+        borderStyle:'solid',
+        marginBottom: 15
+    },
+    titleCard: {
+        fontWeight: 'bold',
+        fontSize: 16
+    },
+    imageCard: {
+        width: 80,
+        height: 80
+    },
+    iconCart:{
+        flex:1,
+        alignItems:'flex-end'
     }
 })
