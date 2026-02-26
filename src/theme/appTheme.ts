@@ -53,14 +53,20 @@ export const stylesGlobal = StyleSheet.create({
         textAlign: 'center'
     },
     containerCard: {
-        flexDirection: 'row',
+        //flexDirection: 'row',
+        width: 160,
+        justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
         borderWidth: 1,
         borderColor: '#CFCFCF',
-        borderRadius: 10,
-        borderStyle:'solid',
-        marginBottom: 15
+        borderRadius: 3,
+        borderStyle: 'solid',
+        marginBottom: 15,
+        shadowColor: '#000',
+        shadowOpacity: 0.25,
+        shadowRadius: 2.65,
+        elevation: 2
     },
     titleCard: {
         fontWeight: 'bold',
@@ -70,8 +76,81 @@ export const stylesGlobal = StyleSheet.create({
         width: 80,
         height: 80
     },
-    iconCart:{
-        flex:1,
-        alignItems:'flex-end'
+    iconCart: {
+        marginTop: 2,
+        flex: 1,
+        alignItems: 'flex-end'
+    },
+    containerModal: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(0,0,0,0.5)'
+    },
+    bodyModal: {
+        padding: 20,
+        backgroundColor: SECONDARY_COLOR,
+        borderRadius: 10
+    },
+    headerModal: {
+        flexDirection: 'row',
+        borderBottomColor: '#CfCfCf',
+        borderBottomWidth: 1,
+        padding: 10
+    },
+    titleModal: {
+        fontSize: 19,
+        fontWeight: 'bold',
+    },
+    imageModal: {
+        height: 200,
+        width: 200
+    },
+    containerQuantity: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    buttonQuantity: {
+        backgroundColor: TERTIARY_COLOR,
+        height: 50,
+        width: 50,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 50,
+        margin: 15
+    },
+    buttonQuantityText: {
+        color: SECONDARY_COLOR,
+        fontSize: 20,
+        fontWeight: 'bold'
+    },
+    textTotalPrice: {
+        fontSize: 17,
+        fontWeight: 'bold',
+        marginBottom: 13
+    },
+    textStock: {
+        fontSize: 19,
+        fontWeight: 'bold',
+        color: '#B52D10',
+        textAlign: 'center'
+    },
+    headerHome: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    iconHome: {
+        flex: 1,
+        alignItems: 'flex-end',
+        paddingHorizontal: 30,
+        paddingTop: 35
+    },
+    textIconCart: {
+        backgroundColor: SECONDARY_COLOR,
+        borderRadius: 20,
+        fontSize: 12,
+        fontWeight: 'bold',
+        paddingHorizontal: 5
     }
 })
