@@ -152,5 +152,24 @@ export const stylesGlobal = StyleSheet.create({
         fontSize: 12,
         fontWeight: 'bold',
         paddingHorizontal: 5
+    },
+    headerTable: {
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    textDescriptionTable: {
+        fontSize: 15,
+        fontWeight: 'bold',
+        color: PRIMARY_COLOR
+    },
+    containerTotalPay: {
+        alignItems: 'flex-end',
+        marginVertical: 15,
+        paddingRight: 5
+    },
+    textTotalPay: {
+        fontSize: 17,
+        fontWeight: 'bold',
+        color: PRIMARY_COLOR
     }
 })

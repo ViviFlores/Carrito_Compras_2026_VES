@@ -6,6 +6,7 @@ import { CardProductComponent } from './components/CardProductComponent';
 import Icon from '@expo/vector-icons/MaterialIcons';
 import { SECONDARY_COLOR } from '../../commons/constants';
 import { stylesGlobal } from '../../theme/appTheme';
+import { ModalCartComponent } from './components/ModalCartComponent';
 
 export interface Product {
     id: number;
@@ -16,7 +17,7 @@ export interface Product {
 }
 
 //interface de los objetos de mi carrito de compras
-interface Cart {
+export interface Cart {
     id: number;
     name: string;
     price: number;
@@ -42,6 +43,14 @@ export const HomeScreen = () => {
 
     //hook useState: permite gestionar el estado de mi carrito de compras
     const [cart, setCart] = useState<Cart[]>([]);
+
+    //hook useState: permite gestionar el estado del modal
+    const [showModal, setShowModal] = useState<boolean>(false);
+
+    //función que actualiza el estado del modal
+    const hiddenModal = (): void => {
+        setShowModal(!showModal);
+    }
 
     //función para modificar el valor del stock
     const changeStockProduct = (id: number, quantity: number): void => {
@@ -86,7 +95,8 @@ export const HomeScreen = () => {
                     <Text style={stylesGlobal.textIconCart}>{cart.length}</Text>
                     <Icon name='shopping-cart'
                         size={30}
-                        color={SECONDARY_COLOR} />
+                        color={SECONDARY_COLOR}
+                        onPress={hiddenModal} />
                 </View>
             </View>
             <BodyComponent>
@@ -97,6 +107,10 @@ export const HomeScreen = () => {
                     numColumns={2}
                     columnWrapperStyle={{ justifyContent: 'space-around' }} />
             </BodyComponent>
+            <ModalCartComponent isVisible={showModal}
+                cart={cart}
+                hiddenModal={hiddenModal} />
         </View>
+
     )
 }
